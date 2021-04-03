@@ -1,0 +1,167 @@
+:root{
+    --dark-magenta: #502050;
+    --soft-pink: #f7f2f7;
+}
+html::after{
+    position: absolute;
+    z-index: -1;
+    content: url(img/bg-pattern-top-mobile.svg);
+    top: 0;
+    opacity: 0.2;
+}
+body{
+    font-family: 'Spartan', sans-serif;
+}
+@media screen and (min-width: 768px){
+    body {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2, 400px);
+    }
+}
+
+
+/*.......HEADER......*/
+
+
+.header{
+    text-align: center;
+    padding: 70px 25px 5px;
+    color: var(--dark-magenta);
+}
+
+.header__title{
+    font-size: 32px;
+}
+.header__text{
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+@media screen and (min-width: 768px){
+    .header{
+    text-align: left;
+    grid-column: 1/2;
+    }
+    .header__title{
+        font-size: 44px;
+    }
+}
+
+
+/*.......RATES......*/
+
+
+.rates{
+    text-align: center;
+}
+.rated{
+    background-color: var(--soft-pink);
+    padding: 10px;
+    line-height: 0.5;
+    margin: 15px 15px;
+    border-radius: 10px;
+}
+.rated__text{
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--dark-magenta);
+}
+.rated__star{
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 768px){
+    .rates{
+        grid-column: 2/4;
+        margin-top: 100px;
+    }
+    .rated{
+        width: 400px;
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+    }
+    .rated__star{
+        margin-left: 5px;
+        margin-bottom: 10px;
+    }
+    .rated__text{
+        margin-left: 25px;
+    }
+    .rated:nth-child(2){
+        left: 25px;
+    }
+    .rated:last-child{
+        left: 50px;
+    }
+}
+
+
+/*.......QUOTES......*/
+
+
+.quote{
+    background-color: var(--dark-magenta);
+    margin: 20px 15px 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.quote__header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 25px;
+}
+.quote__img{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 50px;
+    border-radius: 50%;
+}
+.quote__title{
+    margin-bottom: 0;
+    color: var(--soft-pink);
+    font-size: 14px;
+    font-weight: 700;
+}
+.quote__subtitle{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(170, 93, 170);
+}
+.quote__text{
+    color: hsl(300, 24%, 96%);
+    font-size: 13px;
+    font-weight: 400;
+    margin: 20px;
+    line-height: 1.7;
+}
+
+@media screen and (min-width: 768px){
+    .quotes{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        grid-row: 2;
+        grid-column: 1 / 4;
+    }
+    .quote{
+        position: relative;
+        width: 350px;
+        height: 250px;
+    }
+    .quote:nth-child(2){
+        top:25px;
+    }
+    .quote:last-child{
+        top:50px;
+    }
+}

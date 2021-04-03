@@ -1,0 +1,128 @@
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --yellow: hsl(71, 73%, 54%);
+    --gray: hsl(204, 43%, 93%);
+    --grayblue: hsl(215, 100%, 96%);
+}
+h1{
+    margin-top: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--gray);
+    background-color: var(--grayblue);
+}
+.--font_title{
+    font-size: 20px;
+}
+.--font_700{
+    font-weight: 700;
+}
+.--font_cyan{
+    color: var(--cyan);
+}
+.--font_yellow{
+    color: var(--yellow);
+}
+.--font_grayblue{
+    color: var(--grayblue);
+}
+
+.main{
+    margin: 50px;
+    min-width: 300px;
+    max-width: 550px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.37);
+}
+
+/*.......HEADER.......*/
+
+
+.header{
+    background-color: #fff;
+    padding: 30px 25px;
+}
+.header__subtitle{
+    font-size: 16px;
+}
+.header__text{
+    color: hsl(218, 15%, 65%);;
+    line-height: 1.6;
+}
+
+
+/*.......SUSCRIPTION.......*/
+
+
+.suscription__title{
+    margin-top: 0;
+}
+.suscription{
+    background-color: var(--cyan);
+    padding: 35px 25px;
+}
+.suscription__price::before{
+    content: "$";
+    font-size: 44px;
+}
+.price{
+    display: flex;
+    align-items: center;
+}
+.suscription__price{
+    font-size: 44px;
+}
+.suscription__monthly{
+    margin-left: 15px;
+}
+.suscription__text{
+    margin-top: 5px;
+}
+.suscription__button{
+    display: block;
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: var(--yellow);
+    text-decoration: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 5px;
+}
+.suscription__button:hover{
+    background-color: hsl(71, 100%, 41%);;
+}
+
+/*.......ADVANTAGE.......*/
+
+.advantage{
+    background-color: hsl(179, 41%, 50%);
+    padding: 35px 25px;
+}
+.advantage__title{
+    margin-top: 0;
+}
+.advantage__list{
+    padding-left: 0;
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+
+@media screen and (min-width: 650px){
+    body{
+        height: 100vh;
+    }
+    .about{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+    }
+}  

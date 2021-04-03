@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Faq Accordion Card Main</title>
+</head>
+<body>
+    <section class="faq">
+        <h1 class="faq__title">FAQ</h1>
+        <div class="illustration"></div>
+        <ul class="list">
+            <li class="list__item">
+                <article class="item">
+                    <h2 class="item__title">How many teams members can I invite?</h2>
+                    <p class="item__text">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+                </article>
+            </li>
+            <li>
+                <article class="item">
+                <h2 class="item__title">What is the maximum file upload size?</h2>
+                <p class="item__text">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            </li>
+            </article>
+            <li>
+                <article class="item">
+                    <h2 class="item__title">How do I reset my password?</h2>
+                    <p class="item__text">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+                </article>
+            </li>
+            <li>
+                <article class="item">
+                <h2 class="item__title">Can I cancel my subscription?</h2>
+                <p class="item__text">Yes! Send us a message and we’ll process your request no questions asked.</p>
+                </article>
+            </li>
+            <li>
+                <article class="item">
+                    <h2 class="item__title">Do you provide additional support?</h2>
+                    <p class="item__text">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+                </article>
+            </li>
+        </ul>
+    </section>
+</body>
+<script>
+    accordion = document.getElementsByClassName("item");
+    for(i = 0; i<accordion.length; i++){
+        accordion[i].addEventListener("click", function(){
+            this.classList.toggle("active");
+        })
+    }
+</script>
+</html>

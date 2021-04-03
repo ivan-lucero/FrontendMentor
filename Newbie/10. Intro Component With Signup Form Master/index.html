@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Intro component With Signup | Frontend Mentor</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Learn to code by<br>watching others</h1>
+        <p class="header__text">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+    </header>
+    
+    <section class="contact">
+        <article class="article">
+            <p class="article__text"><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        </article>
+        <form id="form" class="form">
+            <div id="first-name__group">
+                <div id="first-name" class="input-box">
+                    <input class="input" 
+                    name="first-name" 
+                    type="text" 
+                    placeholder="First name" >
+                    <img class="input__icon" src="images/icon-error.svg" alt="">
+                </div>
+                <p class="warning">first name can only contain letters and spaces</p>
+            </div>
+            <div id="last-name__group">
+                <div id="last-name" class="input-box">
+                    <input class="input" 
+                    name="last-name" 
+                    type="text" 
+                    placeholder="Last name" >
+                    <img class="input__icon" src="images/icon-error.svg" alt="">
+                </div>
+                <p class="warning">last name can only contain letters and spaces</p>
+            </div>
+            <div id="email__group">
+                <div id="email" class="input-box">
+                    <input  class="input" 
+                    name="email" 
+                    type="email" 
+                    placeholder="Email Address" >
+                    <img class="input__icon" src="images/icon-error.svg" alt="">
+                </div>
+                <p class="warning">Looks like this is not an email</p>
+            </div>
+            <div id="password__group">
+                <div id="password" class="input-box">
+                    <input class="input" 
+                    name="password" 
+                    type="password" 
+                    placeholder="Password" >
+                    <img class="input__icon" src="images/icon-error.svg" alt="">
+                </div>
+                <p class="warning">The password has to be 6 to 20 digits</p>
+            </div>
+            <button class="form__btn" type="submit">
+                CLAIM YOUR FREE TRIAL
+            </button>
+            <p class="warning__submit">must complete all fields</p>
+            <p class="form__terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+        </form>
+    </section>
+    <script src="form.js"></script>
+</body>
+</html>

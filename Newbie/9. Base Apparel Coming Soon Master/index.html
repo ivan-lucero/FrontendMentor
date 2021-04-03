@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Base Apparel | Frontend Mentor</title>
+</head>
+<body>
+    <main class="main-grid">
+        <header class="header">
+            <img src="images/logo.svg" alt="">
+        </header>
+        <img class="main__img" srcset="
+        /images/hero-desktop.jpg,
+        /images/hero-mobile.jpg 1.5x"
+        alt="modelo">
+        <section class="contact">
+            <h1 class="contact__title">We're<br>coming<br>soon</h1>
+            <p class="contact__text">Hello fellow shoppers! We're currently building our new fashion store. 
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
+            <form id="form" class="contact__input">
+                <input class="input" type="email" name="email" placeholder="Email Address">
+                <img class="input__error dp-none" src="images/icon-error.svg" alt="">
+                <button class="input__btn" type="submit"><img src="images/icon-arrow.svg" alt=""></button>
+            </form>
+            <p id="warning" class="warning-text dp-none">Please provide a valid email</p>
+        </section>
+    </main>
+</body>
+<script src="validator.js"></script>
+</html>

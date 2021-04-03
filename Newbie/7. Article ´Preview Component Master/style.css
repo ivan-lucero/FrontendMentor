@@ -1,0 +1,147 @@
+:root{
+    --DarkBlue: hsl(217, 19%, 35%);
+    --DesaturatedBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+body{
+    padding: 40px 20px;
+    background-color: var(--LightGrayishBlue);
+    font-size: 13px;
+    font-family: 'manrope', sans-serif;
+}
+main{
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+.header{
+    height: 200px;
+    overflow: hidden;
+}
+.header img{
+    max-width: 100%;
+}
+.article, .footer{
+    padding-bottom: 0;
+}
+.article__title{
+    color: var(--DarkBlue);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 40px 20px 20px 20px;
+}
+.article__text{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    color: var(--DesaturatedBlue);
+    line-height: 1.7;
+}
+.footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+}
+.footer__img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.footer__description{
+    margin-left: 15px;
+}
+.footer__name{
+    margin: 0;
+    color: var(--DarkBlue);
+}
+.footer__date{
+    color: var(--GrayishBlue);
+}
+.share{
+    background-color: var(--LightGrayishBlue);
+    position: absolute;
+    right: 30px;
+    padding: 6px;
+    border-radius: 50%;
+    z-index: 999;
+}
+.share img{
+    width: 18px;
+    height: 15px;
+}
+.tooltip{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--DarkBlue);
+}
+.tooltip__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.tooltip__share{
+    letter-spacing: 5px;
+    color: var(--GrayishBlue);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.tooltip__icon{
+    margin-right: 15px;
+}
+.tooltip.active{
+    display: block;
+    z-index: 11;
+}
+
+
+
+@media screen and (min-width: 768px){
+    .main{
+        display: flex;
+        max-height: 400px;
+        max-width: 700px;
+        overflow: visible;
+    }
+    .header{
+        width: 100%;
+        height: 100%;
+    }
+    .header img{
+        max-width: 125%;
+        transform: scale(1.1);
+    }
+    .tooltip{
+        width: 250px;
+        height: 50px;
+        top: -50px;
+        left: 250px;
+        border-radius: 15px;
+    }
+    .tooltip::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0; 
+        height: 0; 
+        border-right: 15px solid transparent;
+        border-top: 15px solid var(--DarkBlue);
+        border-left: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+
+    }
+    .tooltip__share{
+        margin-left: 35px;
+    }
+}

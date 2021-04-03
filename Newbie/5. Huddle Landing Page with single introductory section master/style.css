@@ -1,0 +1,118 @@
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    background-color: var(--Violet);
+    background-image: url(img/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    color: #fff;
+}
+.header{
+    padding: 25px 0;
+    margin-bottom: 30px;
+}
+.header__img{
+    width: 40%;
+    max-width: 200px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__img{
+    max-width: 80%;
+}
+.main__content{
+    padding: 25px;
+    text-align: center;
+    line-height: 1.5;
+}
+.main__title{
+    font-size: 1.5rem;
+}
+.main__text{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.main__button{
+    padding: 10px 65px;
+    margin-top: 10px;
+    color: var(--Violet);
+    text-decoration: none;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 30px;
+    font-size: .7rem;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+.footer{
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer a{
+    text-decoration: none;
+    display: inline-block;
+}
+.footer__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    border: solid 1px rgba(255, 255, 255, 0.534);
+    padding: 2px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 1024px){
+    body{
+        background-image: url(img/bg-desktop.svg);
+        background-size: 90%;
+        max-height: 100vh;
+    }
+    .header,
+    .main,
+    .footer{
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    .main{
+        flex-direction: row;
+    }
+    .main__content{
+        text-align: left;
+    }
+    .main__title{
+        font-size: 2.5rem;
+    }
+    .main__button{
+        font-size: 18px;
+    }
+    .main__button:hover{
+        background-color: var(--Soft-Magenta);
+        color: #fff;
+    }
+    .footer{
+        padding-right: 200px;
+        justify-content: flex-end;
+    }
+    .footer__icon {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .footer__icon:hover{
+        border: solid 1px var(--Soft-Magenta);
+        color: var(--Soft-Magenta);
+    }
+}

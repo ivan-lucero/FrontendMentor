@@ -1,0 +1,210 @@
+:root{
+    /* Primary */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    /* Accent */
+    --Blue: hsl(248, 32%, 49%);
+    /* Neutrals */
+    --DarkBlue: hsl(249, 10%, 26%); 
+    --GrayishBlue: hsl(246, 25%, 77%);
+    --font: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font);
+    font-size: 16px;
+    background-image: url(images/bg-intro-mobile.png);
+    background-color: var(--Red);
+    background-size: cover;
+    padding: 50px 15px 30px 15px;
+}
+.header{
+    text-align: center;
+    color: #fff;
+    padding-bottom: 50px;
+}
+.header__title{
+    font-size: 1.3rem;
+}
+.header__text{
+    font-weight: 300;
+    font-size: .8rem;
+    line-height: 1.8;
+}
+.article{
+    background-color: var(--Blue);
+    padding: 1px 70px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    font-size: .8rem;
+    line-height: 1.7;
+    border-radius: 10px;
+    box-shadow: 0px 5px 1px hsla(0, 82%, 63%, 0.65);
+}
+.article span{
+    font-weight: 600;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    border: 1px solid hsla(246, 25%, 77%, 0.4);
+    margin-bottom: 15px;
+}
+.input{
+    width: 80%;
+    padding: 15px;
+    font-family: var(--font);
+    font-weight: 600;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+.input-box.input-box--invalid{
+    border: 1px solid var(--Red);
+}
+.input-box.input-box--valid{
+    border: 1px solid var(--Green);
+}
+.input::placeholder{
+    font-weight: 600;
+    font-family: var(--font);
+    font-size: .8rem;
+    color: var(--DarkBlue);
+}
+.input__icon{
+    display: none;
+    margin-right: 15px;
+    width: 20px;
+}
+.input__icon.input__icon--active{
+    display: block;
+}
+.form{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 1px hsla(0, 82%, 63%, 0.65);
+}
+.form__btn{
+    font-family: var(--font);
+    font-weight: 500;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--Green);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 1px hsla(120, 100%, 26%, 0.65);
+    color: #fff;
+    letter-spacing: 1px;
+}
+.form__terms{
+    text-align: center;
+    color: var(--GrayishBlue);
+    font-size: .7rem;
+}
+.form__terms a{
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--Red);
+}
+.input:focus .input-box{
+    border: 1px solid black;
+}
+.warning{
+    display: none;
+    font-style: italic;
+    text-align: right;
+    margin-top: -10px;
+    color: var(--Red);
+    font-size: .7rem;
+}
+.warning.warning--active{
+    display: block;
+}
+.warning__submit{
+    display: none;
+    font-style: italic;
+    text-align: center;
+    color: #fff;
+    font-size: .9rem;
+    background-color: var(--Red);
+    border-radius: 5px;
+}
+.warning__submit.warning__submit--invalid{
+    display: block;
+}
+.warning__submit.warning__submit--success{
+    display: block;
+    background-color: hsl(154, 98%, 64%);
+}
+@media screen and (min-width: 768px){
+    body{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        text-align: left;
+        padding-right: 20px;
+    }
+    .header__title{
+        font-size: 2rem;
+    }
+    .header__text{
+        font-size: .9rem;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    body{
+        background-image: url(images/bg-intro-desktop.png);
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+    .header{
+        padding-right: 100px;
+    }
+    .header__title{
+        font-size: 3.5rem;
+    }
+    .header__text{
+        font-size: 1.1rem;
+    }
+    .article__text{
+        font-size: 1.1rem;
+    }
+    .input{
+        padding-left: 40px;
+    }
+    .input,
+    .input::placeholder{
+        font-size: 1.1rem;
+    }
+    .form__btn{
+        font-size: 1.1rem;
+    }
+    .form{
+        padding: 35px;
+    }
+    .warning{
+        font-size: .9rem;
+    }
+}

@@ -1,0 +1,124 @@
+:root{
+    /*text*/
+    --dark-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Vdark-blue: hsl(237, 12%, 33%);
+    --grayish-blue: hsl(240, 6%, 50%);
+    /*gradient*/
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    /*dividers*/
+    --Light-blue: hsl(240, 5%, 91%);
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+}
+.list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.faq{
+    width: 90%;
+    max-width: 500px;
+    margin-top: 150px;
+    position: relative;
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+    background-image: url(img/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: var(--Light-blue);
+    border-radius: 25px;
+}
+.illustration{
+    position: absolute;
+    display: inline-block;
+    top: -120px;
+    right: 0;
+    left: 0;
+    background-image: url(img/illustration-woman-online-mobile.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 250px;
+}
+.faq__title{
+    text-align: center;
+    font-size: 34px;
+}
+.item{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.item__title{
+    padding: 15px 0;
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+}
+.item__title::after{
+    content: url(img/icon-arrow-down.svg);
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: rotate .3s;
+}
+
+.item__text{
+    /* background-color: red; */
+    overflow: hidden;
+    line-height: 1.5;
+    position: relative;
+    display: none;
+    width: 95%;
+    /* height: 0; */
+    transform: scaleY(0%);
+    transition: scaleY ease-out .4s;
+}
+
+.item.active .item__text{
+    transform: scaleY(100%);
+    display: block;
+    padding-bottom: 5px;
+}
+
+.item.active .item__title{
+    font-weight: 700;
+}
+.item.active .item__title::after{
+    transform: rotate(180deg);
+    top:25%;
+}
+
+@media screen and (min-width: 1024px){
+    .faq{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-size: 500px;
+        background-image: url(img/bg-pattern-desktop.svg);
+        background-position: -150px bottom;
+    }
+    .faq__title{
+        align-self: center;
+    }
+    
+    .item{
+    }
+    .item__title:hover{
+        color: var(--Soft-red)
+    }
+}
